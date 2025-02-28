@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DEFAULT_RELAYS=wss://relay.damus.io,wss://relay.nostr.info,wss://nostr.zebedee.cloud
+      - CACHE_TTL=3600
+      - PROFILE_CACHE_SIZE=1000
+      - REQUEST_TIMEOUT_MS=5000
+      - LOG_LEVEL=info
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped

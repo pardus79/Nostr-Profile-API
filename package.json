@@ -1,0 +1,38 @@
+{
+  "name": "nostr-profile-api",
+  "version": "1.0.0",
+  "description": "API service that connects to Nostr relays and provides Lightning address lookups",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "generate-key": "node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\""
+  },
+  "keywords": [
+    "nostr",
+    "lightning",
+    "api",
+    "npub"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nostr-tools": "^1.17.0",
+    "node-cache": "^5.1.2",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "ws": "^8.14.2",
+    "express-rate-limit": "^7.1.5",
+    "express-slow-down": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2"
+  }
+}
