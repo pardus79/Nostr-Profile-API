@@ -1,3 +1,4 @@
+global.WebSocket = require('ws');
 const { relayInit, nip19 } = require('nostr-tools');
 const logger = require('../utils/logger');
 
